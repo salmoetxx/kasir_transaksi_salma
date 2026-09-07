@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Struk Container */
+.struk-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 25px 20px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+
+/* Header Struk */
+.struk-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.struk-header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.struk-header p {
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: 2px;
+}
+
+/* Garis Pembatas Struk */
+.divider {
+    border-top: 1px dashed #777;
+    margin: 12px 0;
+}
+
+/* Tabel Informasi Transaksi & Pelanggan */
+.info-table {
+    width: 100%;
+    font-size: 0.82rem;
+}
+
+.info-table td {
+    padding: 3px 0;
+    vertical-align: top;
+}
+
+.info-table td:first-child {
+    width: 35%;
+    color: #444;
+}
+
+/* Tabel Daftar Item Belanja */
+.item-table {
+    width: 100%;
+    font-size: 0.82rem;
+    border-collapse: collapse;
+}
+
+.item-table th {
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #aaa;
+    font-weight: 700;
+}
+
+.item-table td {
+    padding: 6px 0;
+}
+
+/* Tabel Total Bayar */
+.total-table {
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+.total-table td {
+    padding: 4px 0;
+}
+
+/* Footer Struk */
+.struk-footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Area Tombol Aksi */
+.no-print {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-print {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-print:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-back {
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-back:hover {
+    background-color: #e2e8f0;
+}
+
+/* Pengaturan Saat Cetak / Print Ke Kertas */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+    
+    .struk-card {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}
